@@ -1,5 +1,7 @@
 # The "MST" Clock
 
+https://github.com/StormFireFox1/MSTClock/assets/11583824/0ee36f27-db48-407d-b1ab-f01783078160
+
 ## Ok, but for real, what is this?
 
 This is a clock that displays the current time in Matei Standard Time (MST), an inside joke from one of my friends groups. Details on [the website](https://mst.matei.lol).
