@@ -63,7 +63,7 @@ import Layout from '../layouts/Layout.astro';
 		dialog.close();
 	});
 
-	const intervalID = setInterval(() => {
+	const calculateMST = () => {
 		const currentTime = new Date();
 		// Delay by MST_DELAY.
 		currentTime.setSeconds(currentTime.getSeconds() - MST_DELAY);
@@ -74,5 +74,8 @@ import Layout from '../layouts/Layout.astro';
 			second: "2-digit",
 		});
 		MSTTime.textContent = timeString;
-	}, 1000);
+	};
+	calculateMST();
+
+	const intervalID = setInterval(calculateMST, 1000);
 </script>
