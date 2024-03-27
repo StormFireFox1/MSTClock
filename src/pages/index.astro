@@ -50,27 +50,29 @@ import Layout from '../layouts/Layout.astro';
 <script>
 	// Delay of 21 minutes and 28 seconds for MST.
 	const MST_DELAY = 1288;
-	const dialog = document.querySelector("#mst-info-dialog");
-	const modalText = document.querySelector("#whats-this-text");
-	const closeText = document.querySelector("#dialog-close-text");
-	const MSTTime = document.querySelector("#mst-time");
+	const dialog: HTMLDialogElement = document.querySelector("#mst-info-dialog")!;
+	const modalText: HTMLButtonElement = document.querySelector("#whats-this-text")!;
+	const closeText: HTMLButtonElement = document.querySelector("#dialog-close-text")!;
+	const MSTTime: HTMLHeadingElement = document.querySelector("#mst-time")!;
 
-	modalText?.addEventListener("click", () => {
-		(dialog as HTMLDialogElement).showModal();
+	modalText.addEventListener("click", () => {
+		dialog.showModal();
 	});
 
-	closeText?.addEventListener("click", () => {
-		(dialog as HTMLDialogElement).close();
+	closeText.addEventListener("click", () => {
+		dialog.close();
 	});
 
 	const intervalID = setInterval(() => {
 		const currentTime = new Date();
 		// Delay by MST_DELAY.
 		currentTime.setSeconds(currentTime.getSeconds() - MST_DELAY);
-		const hours = currentTime.getHours().toString().padStart(2, '0');
-		const minutes = currentTime.getMinutes().toString().padStart(2, '0');
-		const seconds = currentTime.getSeconds().toString().padStart(2, '0');
-		const time = `${hours}:${minutes}:${seconds}`;
-		(MSTTime as HTMLParagraphElement).textContent = time;
+		const timeString = currentTime.toLocaleTimeString("en-US", {
+			hour12: false,
+			hour: "2-digit",
+			minute: "2-digit",
+			second: "2-digit",
+		});
+		MSTTime.textContent = timeString;
 	}, 1000);
 </script>
