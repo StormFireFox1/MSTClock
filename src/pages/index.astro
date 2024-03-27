@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="MST Clock">
-	<main class="flex h-screen flex-col items-center justify-center">
-		<h1 class="font-righteous font-bold text-slate-300 text-6xl mb-4">The time in <span class="bg-gradient-to-r from-blue-500 to-indigo-600 inline-block text-transparent bg-clip-text">MST</span> is:</h1>
-		<h2 id="mst-time" class="font-fira-code text-slate-200 text-9xl">¯\_(ツ)_/¯</h2>
+	<main class="flex h-screen flex-col items-center justify-center text-center">
+		<h1 class="font-righteous font-bold text-slate-300 text-3xl md:text-6xl mb-4">The time in <span class="bg-gradient-to-r from-blue-500 to-indigo-600 inline-block text-transparent bg-clip-text">MST</span> is:</h1>
+		<h2 id="mst-time" class="font-fira-code text-slate-200 text-6xl md:text-9xl">¯\_(ツ)_/¯</h2>
 		<button tabindex="0" id="whats-this-text" class="absolute bottom-24 font-righteous text-slate-600 text-xl underline hover:text-slate-200">What's this?</button>
 		<a tabindex="1" href="https://matei.lol" class="absolute bottom-12 font-righteous text-slate-600 text-xl underline hover:text-slate-200">Made by Matei.</a>
 		<dialog id="mst-info-dialog" class="items-center justify-center bg-slate-800 rounded-lg shadow-md">
