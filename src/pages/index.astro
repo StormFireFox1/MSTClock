@@ -5,15 +5,16 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="MST Clock">
 	<main class="flex h-screen flex-col items-center justify-center">
 		<h1 class="font-righteous font-bold text-slate-300 text-6xl mb-4">The time in <span class="bg-gradient-to-r from-blue-500 to-indigo-600 inline-block text-transparent bg-clip-text">MST</span> is:</h1>
-		<h2 id="mst-time" class="font-rowdies text-slate-200 text-9xl">Calculating...</h2>
-		<a tabindex="0" id="whats-this-text" class="absolute bottom-12 font-righteous text-slate-600 text-xl underline hover:text-slate-200">What's this?</a>
+		<h2 id="mst-time" class="font-fira-code text-slate-200 text-9xl">¯\_(ツ)_/¯</h2>
+		<button tabindex="0" id="whats-this-text" class="absolute bottom-24 font-righteous text-slate-600 text-xl underline hover:text-slate-200">What's this?</button>
+		<a tabindex="1" href="https://matei.lol" class="absolute bottom-12 font-righteous text-slate-600 text-xl underline hover:text-slate-200">Made by Matei.</a>
 		<dialog id="mst-info-dialog" class="items-center justify-center bg-slate-800 rounded-lg shadow-md">
 			<section class="flex flex-col h-full px-8 justify-center items-center">
 				<h1 class="text-slate-300 font-righteous font-bold text-3xl mb-4">MST = Matei Standard Time.</h1>
 				<p class="text-slate-400 text-lg text-center mb-4">I (sadly) happen to be notoriously late to a lot of my social events and gaming sessions with my friends. Due to my rather extreme lengths of being late to gaming sessios (i.e. 30 minutes or more), my friends have coined the term "MST" to (rightfully) call me out for being egregiously late.</p>
 				<p class="text-slate-400 text-lg text-center mb-4">However, I took this in stride, and instead have now thrown this term around when my friends happen to be late, so really this "time zone" is now applicable to my friend group very often.</p>
 				<p class="text-slate-400 text-lg text-center mb-4">That being said, we did not know exactly what MST was in terms of real time. Therefore, I calculated the statistical average delay of my arrival to happenings using my time tracker entries, which happens to be 21 minutes and 28 seconds. This page reflects your exact current time in MST.</p>
-				<a id="dialog-close-text" class="font-righteous text-slate-600 underline text-lg text-center hover:text-slate-200">Go back to the time</a>
+				<button id="dialog-close-text" class="font-righteous text-slate-600 underline text-lg text-center hover:text-slate-200">Go back to the time</button>
 			</section>
 		</dialog>
 	</main>
@@ -32,6 +33,11 @@ import Layout from '../layouts/Layout.astro';
 	@font-face {
 		font-family: 'Righteous';
 		src: url('/Righteous.ttf') format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Fira Code';
+		src: url('/FiraCode.ttf') format('truetype');
 	}
 
 	dialog {

@@ -5,6 +5,7 @@ export default {
 		fontFamily: {
 			'rowdies': ['Rowdies', 'sans-serif'],
 			'righteous': ['Righteous', 'sans-serif'],
+			'fira-code': ['Fira Code', 'monospace'],
 		},
 		extend: {
 			colors: {
